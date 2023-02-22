@@ -46,6 +46,8 @@ sudo apt install -y mosquitto mosquitto-clients
 cd src/mqtt_bridge/
 pip3 install -r dev-requirements.txt
 
+# return to root directory
+cd ~/workspace/tare_planner
 # compile workspace
 catkin_make
 
