@@ -48,6 +48,7 @@ pip3 install -r dev-requirements.txt
 
 # return to root directory
 cd ~/workspace/tare_planner
+source /opt/ros/noetic/setup.bash
 # compile workspace
 catkin_make
 
@@ -68,5 +69,6 @@ git checkout $ROS_DISTRO
 # install sim envs
 ./src/vehicle_simulator/mesh/download_environments.sh
 
+source /opt/ros/noetic/setup.bash
 # compile workspace
 catkin_make
