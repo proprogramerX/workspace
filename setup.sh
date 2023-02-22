@@ -37,9 +37,6 @@ cd tare_planner
 # update git submodules
 git submodule update --init
 
-# compile workspace
-catkin_make
-
 # install dependencies for MQTT ROS Node Bridge 
 sudo apt install -y python3-pip
 sudo apt install -y ros-noetic-rosbridge-library
@@ -48,6 +45,9 @@ sudo apt install -y mosquitto mosquitto-clients
 # pip install requirements
 cd src/mqtt_bridge/
 pip3 install -r dev-requirements.txt
+
+# compile workspace
+catkin_make
 
 # go to workspace directory
 cd ~/workspace
@@ -62,8 +62,9 @@ git clone https://github.com/proprogramerX/autonomous_exploration_development_en
 # Enter AEDE and compile workspace
 cd autonomous_exploration_development_environment
 git checkout $ROS_DISTRO
-catkin_make
 
 # install sim envs
 ./src/vehicle_simulator/mesh/download_environments.sh
 
+# compile workspace
+catkin_make
