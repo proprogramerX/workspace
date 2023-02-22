@@ -46,8 +46,6 @@ sudo apt install -y mosquitto mosquitto-clients
 cd src/mqtt_bridge/
 pip3 install -r dev-requirements.txt
 
-# setup ROS setup.sh
-source /opt/ros/noetic/setup.bash
 # compile workspace
 catkin_make
 
@@ -68,7 +66,5 @@ git checkout $ROS_DISTRO
 # install sim envs
 ./src/vehicle_simulator/mesh/download_environments.sh
 
-# setup ROS setup.sh
-source /opt/ros/noetic/setup.bash
 # compile workspace
 catkin_make
